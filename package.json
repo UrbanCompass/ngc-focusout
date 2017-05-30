@@ -1,0 +1,25 @@
+{
+  "name": "ngc-focusout",
+  "version": "0.0.1",
+  "description": "More robust replacement for ng-blur",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UrbanCompass/ngc-focusout.git"
+  },
+  "keywords": [
+    "angularjs",
+    "angular",
+    "blur",
+    "focus"
+  ],
+  "author": "Wei Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UrbanCompass/ngc-focusout/issues"
+  },
+  "homepage": "https://github.com/UrbanCompass/ngc-focusout#readme"
+}
