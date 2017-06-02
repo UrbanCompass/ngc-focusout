@@ -1,17 +1,17 @@
 import angular from 'angular';
 import 'angular-mocks';
 
-import ngcFocusOut from '../src/index.js';
+import ngcFocusout from '../src/index.js';
 
-describe('ngc.focusOut', () => {
+describe('ngc.focusout', () => {
 
   let $scope, $timeout, docEl, el, outsideEl;
 
-  beforeEach(angular.mock.module(ngcFocusOut));
+  beforeEach(angular.mock.module(ngcFocusout));
 
   beforeEach(inject(($compile, $rootScope, _$timeout_, $window) => {
     const element = angular.element([
-      '<div ngc-focus-out="spy()" tabindex="-1">',
+      '<div ngc-focusout="spy()" tabindex="-1">',
       '<input type="text">',
       '</div>',
     ].join(''));

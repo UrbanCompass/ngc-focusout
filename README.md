@@ -4,7 +4,7 @@ More robust replacement for `ngBlur`. This directive uses the blur event's captu
 
 Usage:
 ```html
-<div ngc-focus-out="applyAngularExpression()" tabindex="-1"></div>
+<div ngc-focusout="applyAngularExpression()" tabindex="-1"></div>
 ```
 
 Note that the element must be focusable in order for any blur events to fire. Make sure to

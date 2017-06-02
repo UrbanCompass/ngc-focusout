@@ -1,7 +1,7 @@
 import angular from 'angular';
 
-focusOutDirective.$inject = ['$document', '$timeout'];
-function focusOutDirective($document, $timeout) {
+focusoutDirective.$inject = ['$document', '$timeout'];
+function focusoutDirective($document, $timeout) {
   const doc = $document[0];
 
   return {
@@ -10,17 +10,17 @@ function focusOutDirective($document, $timeout) {
     link(scope, element, attrs) {
       const el = element[0];
 
-      el.addEventListener('blur', onFocusOut, true);
+      el.addEventListener('blur', onFocusout, true);
 
       scope.$on('$destroy', () => {
-        el.removeEventListener('blur', onFocusOut, true);
+        el.removeEventListener('blur', onFocusout, true);
       });
 
-      function onFocusOut() {
+      function onFocusout() {
         // Wait for new document.activeElement to be set. $applyAsync() does not work.
         $timeout(() => {
           if (!el.contains(doc.activeElement)) {
-            scope.$apply(attrs.ngcFocusOut);
+            scope.$apply(attrs.ngcFocusout);
           }
         }, 0, false);
       }
@@ -28,6 +28,6 @@ function focusOutDirective($document, $timeout) {
   };
 }
 
-export default angular.module('ngc.focusOut', [])
-  .directive('ngcFocusOut', focusOutDirective)
+export default angular.module('ngc.focusout', [])
+  .directive('ngcFocusout', focusoutDirective)
   .name;
