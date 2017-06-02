@@ -4,6 +4,7 @@
   "description": "More robust replacement for ng-blur",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "eslint ."
   },
   "repository": {
@@ -23,6 +24,9 @@
   },
   "homepage": "https://github.com/UrbanCompass/ngc-focusout#readme",
   "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
     "eslint": "^3.19.0",
     "webpack": "^2.6.1"
   }
