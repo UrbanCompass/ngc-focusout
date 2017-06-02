@@ -9,7 +9,7 @@ module.exports = {
     library: 'ngc-focusout',
     libraryTarget: 'umd',
   },
-  externals: 'angular',
+  externals: ['angular'],
   module: {
     rules: [
       {

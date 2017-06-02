@@ -10,13 +10,15 @@ function focusOutDirective($document, $timeout) {
     link(scope, element, attrs) {
       const el = element[0];
 
-      // Wait for new document.activeElement to be set. $applyAsync() does not work.
-      el.addEventListener('blur', () => $timeout(onFocusOut, 0, false), true);
+      el.addEventListener('blur', onFocusOut, true);
 
       function onFocusOut() {
-        if (!el.contains(doc.activeElement)) {
-          scope.$apply(attrs.ucFocusOut);
-        }
+        // Wait for new document.activeElement to be set. $applyAsync() does not work.
+        $timeout(() => {
+          if (!el.contains(doc.activeElement)) {
+            scope.$apply(attrs.ngcFocusOut);
+          }
+        }, 0, false);
       }
     },
   };
