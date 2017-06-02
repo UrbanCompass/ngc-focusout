@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/UrbanCompass/ngc-focusout#readme",
   "devDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "^3.19.0",
+    "webpack": "^2.6.1"
   }
 }
