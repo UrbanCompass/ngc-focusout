@@ -12,6 +12,10 @@ function focusOutDirective($document, $timeout) {
 
       el.addEventListener('blur', onFocusOut, true);
 
+      scope.$on('$destroy', () => {
+        el.removeEventListener('blur', onFocusOut, true);
+      });
+
       function onFocusOut() {
         // Wait for new document.activeElement to be set. $applyAsync() does not work.
         $timeout(() => {
