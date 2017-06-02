@@ -1,14 +1,5 @@
 import angular from 'angular';
 
-/**
- * More robust replacement for `ngBlur`. This directive will only trigger when focus leaves the
- * element this is applied on, as well as any children of the element. Usage:
- *
- *   <div ngc-focus-out="applyAngularExpression()" tabindex="-1"></div>
- *
- * Notice that the element must be focusable in order for any blur events to fire. Make sure to
- * use this together with the `tabindex` attribute when necessary.
- */
 focusOutDirective.$inject = ['$document', '$timeout'];
 function focusOutDirective($document, $timeout) {
   const doc = $document[0];
