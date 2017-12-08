@@ -12,7 +12,7 @@
   "esnext": "src/index.js",
   "scripts": {
     "build": "webpack",
-    "prepublish": "npm test && npm run build",
+    "prepublishOnly": "npm test && npm run build",
     "test": "karma start --single-run && eslint ."
   },
   "repository": {
