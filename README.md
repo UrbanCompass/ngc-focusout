@@ -1,4 +1,4 @@
-# ngc-focusout [![CircleCI](https://circleci.com/gh/UrbanCompass/ngc-focusout.svg?style=svg)](https://circleci.com/gh/UrbanCompass/ngc-focusout)
+# ngc-focusout [![Build Status](https://travis-ci.org/UrbanCompass/ngc-focusout.svg?branch=master)](https://travis-ci.org/UrbanCompass/ngc-focusout)
 
 More robust replacement for `ngBlur`. This directive uses the blur event's capture phase to detect when focus leaves not just the element this is applied on, but children of the element as well.
 
