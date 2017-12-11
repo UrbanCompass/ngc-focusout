@@ -16,11 +16,12 @@ function focusoutDirective($document, $timeout) {
         el.removeEventListener('blur', onFocusout, true);
       });
 
-      function onFocusout() {
+      function onFocusout(event) {
         // Wait for new document.activeElement to be set. $applyAsync() does not work.
         $timeout(() => {
           if (!el.contains(doc.activeElement)) {
-            scope.$apply(attrs.ngcFocusout);
+            scope.$eval(attrs.ngcFocusout, {$event: event});
+            scope.$apply();
           }
         }, 0, false);
       }

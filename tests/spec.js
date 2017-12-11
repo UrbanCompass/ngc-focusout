@@ -11,7 +11,7 @@ describe('ngc.focusout', () => {
 
   beforeEach(inject(($compile, $rootScope, _$timeout_, $window) => {
     const element = angular.element([
-      '<div ngc-focusout="spy()" tabindex="-1">',
+      '<div ngc-focusout="spy($event)" tabindex="-1">',
       '<input type="text">',
       '</div>',
     ].join(''));
@@ -50,6 +50,7 @@ describe('ngc.focusout', () => {
     }).then(() => {
       $timeout.flush();
       expect($scope.spy.calls.count()).toBe(1);
+      expect($scope.spy.calls.argsFor(0)[0] instanceof window.FocusEvent).toBe(true);
     }).then(done, fail);
   });
 
@@ -78,6 +79,7 @@ describe('ngc.focusout', () => {
     }).then(() => {
       $timeout.flush();
       expect($scope.spy.calls.count()).toBe(1);
+      expect($scope.spy.calls.argsFor(0)[0] instanceof window.FocusEvent).toBe(true);
     }).then(done, fail);
   });
 
