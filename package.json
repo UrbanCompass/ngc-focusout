@@ -1,6 +1,6 @@
 {
   "name": "ngc-focusout",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "More robust replacement for ng-blur",
   "files": [
     "dist/",
