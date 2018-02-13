@@ -25,13 +25,14 @@
     "blur",
     "focus"
   ],
-  "author": "Wei Wang",
+  "author": "Wei Wang <wei@compass.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/UrbanCompass/ngc-focusout/issues"
   },
   "homepage": "https://github.com/UrbanCompass/ngc-focusout#readme",
   "devDependencies": {
+    "angular": "~1.5.6",
     "angular-mocks": "~1.5.6",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -47,7 +48,7 @@
     "karma-webpack": "^2.0.3",
     "webpack": "^2.6.1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "angular": "~1.5.6"
   }
 }
